@@ -1,0 +1,37 @@
+.chirp {
+  padding: 10px;
+  margin: 10px;
+  background-color: #e8f9ff;
+}
+
+.cool-font {
+  font-family: Shrikhand, cursive;
+  font-size: 24px;
+  color: yellowgreen;
+}
+
+.jumbotron {
+  font-family: Shrikhand, cursive;
+  color: white;
+  background-color: yellowgreen;
+}
+
+input,
+textarea {
+  margin: 20px;
+}
+
+.btn {
+  margin: 10px;
+  font-family: Shrikhand, cursive;
+  color: yellowgreen;
+  background-color: white;
+  border-color: yellowgreen;
+  border-style: solid;
+  border-width: 2px;
+}
+
+p {
+  margin: 0;
+  font-size: 16px;
+}
