@@ -2,3 +2,53 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
+body{
+
+  font-family: 'Oswald', sans-serif;
+
+}
+
+#loginHeader{
+  background-image: url(bonebrothchickenstock-articleLarge2.jpg);
+  background-size: 100%;
+  color: white;
+  text-shadow: 0px 0px 15px #585f31;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-family: 'Damion', cursive;
+  font-size: 100px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+h4 {
+  text-align: center;
+  color: olive;
+}
+.login{
+  background-color: rgb(226, 226, 226);
+  font-size: 20px;
+  margin-top: 0px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+}
+
+form.login {
+  margin-top: 0px;
+}
+
+.btn {
+  background-color: olive;
+  color: white;
+  border-width: 0px;
+  font-family: 'Oswald', sans-serif;
+}
+
+label{
+  color: olive;
+}
