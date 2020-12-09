@@ -15,9 +15,24 @@ module.exports = function(app) {
   // GET route for getting all of the Recipes
   app.get("/api/recipes", function(req, res) {
     // findAll returns all entries for a table when used with no options
-    db.Recipe.findAll({}).then(function(dbRecipe) {
+    db.Recipe.findAll({
+      where: {
+        UserId: req.user.id
+      }
+    }).then(function(dbRecipe) {
       // We have access to the Recipes as an argument inside of the callback function
       res.json(dbRecipe);
+    });
+  });
+
+
+  app.get("/api/all/recipes", function(req, res) {
+    // findAll returns all entries for a table when used with no options
+    db.Recipe.findAll({
+     
+    }).then(function(dbRecipe) {
+      // We have access to the Recipes as an argument inside of the callback function
+      res.json(dbRecipe); 
     });
   });
 
@@ -29,7 +44,8 @@ module.exports = function(app) {
     db.Recipe.create({
       author: req.body.author,
       recipe: req.body.recipe,
-      body: req.body.body
+      body: req.body.body,
+      UserId: req.user.id
     }).then(function(dbRecipe) {
       // We have access to the new Recipe as an argument inside of the callback function
       res.json(dbRecipe);
