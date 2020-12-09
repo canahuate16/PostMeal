@@ -23,12 +23,22 @@
   padding-bottom: 10px;
 }
 
+h1 {
+  text-align: center;
+  font-family: 'Damion', cursive;
+  margin-top: 10px;
+}
+
 h4 {
   text-align: center;
   color: black;
   font-family: 'Oswald', sans-serif;
   margin-top: 5px;
   font-size: 20px;
+}
+
+#welcomeUser {
+  color: grey;
 }
 
 #loginHeader{
@@ -81,6 +91,30 @@ label{
 
 p{
   font-family: 'Oswald', sans-serif;
+  margin-bottom: 5px;
+  color: black;
+  font-size: 22px;
+}
+
+#pSignUp{
+  font-family: 'Oswald', sans-serif;
   text-align: center;
   color: grey;
+}
+
+#newRecipeForm{
+  background-image: url(bonebrothchickenstock-articleLarge2.jpg);
+  background-size: 100%;
+  margin-top: 15px;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-radius: 5px;
+}
+
+#chirp-submit{
+  background-color: black;
 }
