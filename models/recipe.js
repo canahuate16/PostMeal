@@ -1,23 +1,29 @@
+const { DATE } = require("sequelize");
+
 module.exports = function(sequelize, DataTypes) {
   const Recipe = sequelize.define("Recipe", {
-    title: {
+    author: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-        len: [1]
-      }
+    },
+    
+    recipe: {
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     body: {
       type: DataTypes.TEXT,
       allowNull: false,
-      validate: {
-        len: [1]
-      }
-    },
-    category: {
-      type: DataTypes.STRING,
-      defaultValue: "Personal"
     }
   });
+  Recipe.associate = function(models) {
+    // We're saying that a Recipe should belong to an Author
+    // A Recipe can't be created without an Author due to the foreign key constraint
+    Recipe.belongsTo(models.User, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
   return Recipe;
 };

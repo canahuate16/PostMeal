@@ -5,6 +5,7 @@
   <title>Your Recipes</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <link href="https://fonts.googleapis.com/css2?family=Damion&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -38,16 +39,51 @@
       </div>
     </nav>
 
-    <!--Content of the page code here-->
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-          <h2>Welcome <span class="member-name"></span></h2>
+   
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="jumbotron">
+          <h1 class="text-center">PostMeal!</h1>
         </div>
+      </div> 
+      <div class="col-md-6 col-md-offset-3">
+        <h2>Welcome <span class="member-name"></span></h2> <br><br><br>
       </div>
     </div>
   </div>
 
+
+  <div class="container">
+
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+        <p class="cool-font">User</p>
+        <input class="form-control" type="text" id="author" placeholder="Enter Your Name">
+        <br>
+        <p class="cool-font">Recipe</p>
+        <input class="form-control" type="text" id="recipe" placeholder="Enter Recipe">
+        <br>
+        <p class="cool-font">Ingredients</p>
+        <textarea class="form-control" rows="3" id="chirp-box" placeholder="Enter Ingredients Here!"></textarea> <br>
+        <button id="chirp-submit" class="btn btn-lg">Submit!</button>
+      </div>
+    </div>
+    <br><br><br>
+
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+        <h2>Recipes Shared</h2>
+        <hr>
+        <div id="chirp-area"></div>
+      </div>
+    </div>
+
+  </div>
+  
+
+
+  <script type="text/javascript" src="/js/recipe.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/members.js"></script>
 
