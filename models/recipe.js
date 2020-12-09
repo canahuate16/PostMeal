@@ -16,5 +16,14 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
     }
   });
+  Recipe.associate = function(models) {
+    // We're saying that a Recipe should belong to an Author
+    // A Recipe can't be created without an Author due to the foreign key constraint
+    Recipe.belongsTo(models.User, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
   return Recipe;
 };
