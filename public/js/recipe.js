@@ -20,6 +20,27 @@ $.get("/api/recipes", function (data) {
     }
 
 });
+$.get("/api/all/recipes", function (data) {
+
+    if (data.length !== 0) {
+
+        for (var i = 0; i < data.length; i++) {
+
+            var row = $("<div>");
+            row.addClass("chirp");
+
+            row.append("<p>" + data[i].author + " shared.. </p>");
+            row.append("<p>" + data[i].recipe + "</p>");
+            row.append("<p>" + data[i].body + "</p>");
+            row.append("<p>On " + new Date(data[i].created_at).toLocaleDateString() + "</p>");
+
+            $("#chirp-area").prepend(row);
+
+        }
+
+    }
+
+});
 
 // When user chirps (clicks addBtn)
 $("#chirp-submit").on("click", function (event) {
