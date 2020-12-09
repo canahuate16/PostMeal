@@ -1,5 +1,5 @@
 // When the page loads, grab and display all of our chirps
-$.get("/api/all", function (data) {
+$.get("/api/recipes", function (data) {
 
     if (data.length !== 0) {
 
@@ -36,7 +36,7 @@ $("#chirp-submit").on("click", function (event) {
     console.log(newChirp);
 
     // Send an AJAX POST-request with jQuery
-    $.post("/api/recipe", newChirp)
+    $.post("/api/recipes", newChirp)
         // On success, run the following code
         .then(function () {
 
@@ -57,3 +57,5 @@ $("#chirp-submit").on("click", function (event) {
     $("#recipe").val("");
     $("#chirp-box").val("");
 });
+
+
