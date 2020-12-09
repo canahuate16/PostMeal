@@ -7,40 +7,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css2?family=Damion&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
-  <link href="/css/style.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link href="css/style.css" rel="stylesheet">
 
 </head>
 
 <body>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
+  <div class="container">
+    <!--Navbar Coding-->
+    <nav id= "nav2" class="navbar navbar-expand-lg navbar-light">
+      <div id= "navBar" class="container-fluid justify-content-center">
+        <a class="navbar-brand" style="font-family: 'Damion', cursive;">PostMeal</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" style="font-family: 'Oswald', sans-serif;" href="#">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="font-family: 'Oswald', sans-serif;" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="font-family: 'Oswald', sans-serif;" href="#">My Recipes</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
-  <div id="loginContainer" class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <h2 id= "loginHeader">PostMeal</h2>
-        <h4>Sign in to your account below</h4>
-        <form class="login">
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="email-input" placeholder="Email">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="password-input" placeholder="Password">
-          </div>
-          <button type="submit" class="btn btn-default">Login</button>
-        </form>
-        <br />
-        <p>Or sign up <a href="/">here</a></p>
+    </nav>
+
+    <!--Coding for our Login Form-->
+    <div id="loginContainer" class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6 col-md-offset-3">
+          <h2 id="loginHeader">PostMeal</h2>
+          <h4>Sign in to your account below</h4>
+          <form class="login">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="email-input" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="password-input" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-default">Login</button>
+          </form>
+          <p>Or sign up <a href="/">here</a></p>
+        </div>
       </div>
     </div>
   </div>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/login.js"></script>
 
