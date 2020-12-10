@@ -54,6 +54,7 @@ module.exports = function(app) {
     const recipe = { 
       author: req.body.author,
       recipe: req.body.recipe,
+      ingredients: req.body.ingredients,
       body: req.body.body,
     } 
     db.Recipe.create(recipe)
