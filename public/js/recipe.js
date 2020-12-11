@@ -29,7 +29,7 @@ $("#chirp-submit").on("click", function (event) {
     
     // Make a newChirp object
     var newChirp = {
-        author: $("#author").val().trim(),
+    
         recipe: $("#recipe").val().trim(),
         ingredients: $("#ingredients").val().trim(),
         body: $("#chirp-box").val().trim(),
@@ -41,12 +41,12 @@ $("#chirp-submit").on("click", function (event) {
     // Send an AJAX POST-request with jQuery
     $.post("/api/recipes", newChirp)
         // On success, run the following code
-        .then(function () {
-
+        .then(function (dbRecipe) {
+            console.log (dbRecipe);
             var row = $("<div>");
             row.addClass("chirp");
 
-            row.append("<p>" + newChirp.author + " shared: </p>");
+            row.append("<p>" + dbRecipe.author + " shared: </p>");
             row.append("<p>" + `Recipe: `+ newChirp.recipe + " </p>");
             row.append("<p>" + `Ingredients: `+ newChirp.ingredients + " </p>");
             row.append("<p>" + `Instructions: ` + newChirp.body + "  </p>");
