@@ -30,6 +30,7 @@ $.get("/api/all/recipes", function (data) {
             row.append("<p>" + data[i].recipe + "</p>");
             row.append("<p>" + data[i].ingredients + "</p>");
             row.append("<p>" + data[i].body + "</p>");
+            row.append(`<img src=` + data[i].image_url+ ` >`);
             row.append("<p>On " + new Date(data[i].created_at).toLocaleDateString() + "</p>");
 
             $("#chirp-area").prepend(row);
