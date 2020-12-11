@@ -14,26 +14,16 @@
   </div>
 </div>
 
-<div class = "container">
-<div class = "row">
-<form class = "create-form">
-    <div class = "form-group">
-        <label for = "re">User</label>
-        <input type ="text" id="re" name="name">
-    </div>
-    <div class = "form-group">
-        <label for = "re">Recipe</label>
-        <input type ="text" id="re" name="name">
-    </div>
-</form>
-</div>
-</div>
-
 <div class ="container">
-    <h2>Meals Posted</h2>
-    <div class="card" style="width: 18rem;">
+    <h2>{{author}}'s Recipes</h2>
+    <div class="card">
   <ul>
-   {{#each recipe}}
+   {{#each recipes}}
+   {{#dataValues}}
+   <li>{{recipe}}</li>
+   <li>{{ingredients}}</li>
+   {{/dataValues}}
+   {{/each}}
   </ul>
 </div>
 </div>
