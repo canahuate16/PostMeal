@@ -16,7 +16,7 @@ module.exports = function(app) {
     }).then(function(dbRecipe) {
       console.log(dbRecipe);
       // We have access to the Recipes as an argument inside of the callback function
-      res.render("index", dbRecipe);
+      res.render("index", {recipes:dbRecipe, author:req.user.username});
     });
   });
 

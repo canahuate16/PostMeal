@@ -13,13 +13,10 @@
 //             row.append("<p>" + data[i].recipe + "</p>");
 //             row.append("<p>" + data[i].body + "</p>");
 //            row.append("<p>On " + new Date(data[i].created_at).toLocaleDateString() + "</p>");
-
-//     
-//         }
-
+//  }
 //     }
-
 // });
+
 $.get("/api/all/recipes", function (data) {
     console.log(data)
     if (data.length !== 0) {
