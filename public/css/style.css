@@ -1,3 +1,5 @@
+
+/* Nav Bar Styling */
 #navBar{
   background-color: white;
   padding: 0px;
@@ -21,6 +23,14 @@
   background-color: white;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+/* Header Styling */
+h1 {
+  text-align: center;
+  font-family: 'Damion', cursive;
+  margin-top: 10px;
+  font-size: 70px;
 }
 
 h4 {
@@ -47,8 +57,16 @@ h4 {
   border-radius: 5px;
 }
 
+#signUpHeader{
+  font-family: 'Damion', cursive;
+  text-align: center;
+  font-size: 50px;
+
+}
+
+/* Login Form Styling */
 .login{
-  background-color: rgb(228, 228, 228);
+  background-color: rgb(70, 88, 2);
   font-size: 20px;
   margin-top: 0px;
   padding-top: 20px;
@@ -66,7 +84,7 @@ form.login {
 .btn {
   margin-top: 15px;
   margin-left: 40%;
-  background-color: olive;
+  background-color: black;
   color: white;
   width: 20%;
   border-width: 0px;
@@ -74,13 +92,64 @@ form.login {
 }
 
 label{
-  color: olive;
+  color: rgb(223, 223, 171);
   font-size: 20px;
-    margin-top: 15px;
+  font-family: 'Oswald', sans-serif;
+  margin-top: 15px;
+  margin-bottom: 5px;
 }
 
-p{
+#pSignUp{
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  color: grey;
+
+/* Sign up page styling */
+
+}
+
+#signUpForm{
+  background-color: rgb(70, 88, 2);
+  border-radius: 5px;
+  padding: 20px;
+}
+
+#pLogin{
   font-family: 'Oswald', sans-serif;
   text-align: center;
   color: grey;
 }
+
+/* Recipe creation form styling */
+.pRecipe{
+  font-family: 'Oswald', sans-serif;
+  margin-bottom: 5px;
+  color: rgb(223, 223, 171);
+  font-size: 20px;
+}
+
+a{
+  color: olive;
+}
+
+#newRecipeForm{
+  background-image: url(mise-en-plase3.jpg);
+  background-size: 100%;
+  margin-top: 15px;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-radius: 5px;
+}
+
+#chirp-submit{
+  background-color: black;
+}
+
+
+
+
+
