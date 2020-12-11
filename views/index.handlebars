@@ -1,29 +1,29 @@
-<nav class = "navbar navbar-default">
-    <div class = "container-fluid">
-        <div class = "navabar-header">
-            <a class = "navbar-brand" href= "/logout">
-            Logout
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navabar-header">
+            <a class="navbar-brand" href="/logout">
+                Logout
             </a>
         </div>
     </div>
 </nav>
 
 <div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="postmeal">Post Meal!</h1>
-  </div>
+    <div class="container">
+        <h1 class="postmeal">Post Meal!</h1>
+    </div>
 </div>
 
-<div class ="container">
+<div class="container">
     <h2>{{author}}'s Recipes</h2>
-    <div class="card">
-  <ul>
-   {{#each recipes}}
-   {{#dataValues}}
-   <li>{{recipe}}</li>
-   <li>{{ingredients}}</li>
-   {{/dataValues}}
-   {{/each}}
-  </ul>
-</div>
+    <ul>
+        {{#each recipes}}
+        {{#dataValues}}
+        <li>
+            <p class="recipe">{{recipe}}</p>
+            <p class="ingredient">{{ingredients}}</p>
+        </li>
+        {{/dataValues}}
+        {{/each}}
+    </ul>
 </div>
