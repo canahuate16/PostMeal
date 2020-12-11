@@ -1,9 +1,3 @@
-// *********************************************************************************
-// api-routes.js - this file offers a set of routes for displaying and saving data to the db
-// *********************************************************************************
-
-// Dependencies
-// =============================================================
 
 // Requiring our models
 var db = require("../models");
@@ -38,12 +32,14 @@ module.exports = function(app) {
 
   // POST route for saving a new Recipe
   app.post("/api/recipes", function(req, res) {
+    console.log (req.user)
     // create takes an argument of an object describing the item we want to
     // insert into our table. In this case we just we pass in an object with a recipe
     // and body property (req.body)
     db.Recipe.create({
-      author: req.body.author,
+      author: req.user.username,
       recipe: req.body.recipe,
+      ingredients: req.body.ingredients,
       body: req.body.body,
       UserId: req.user.id
     }).then(function(dbRecipe) {
@@ -79,6 +75,7 @@ module.exports = function(app) {
     db.Recipe.update({
       author: req.body.author,
       recipe: req.body.recipe,
+      ingredients: req.body.ingredients,
       body: req.body.body
     }, {
       where: {
