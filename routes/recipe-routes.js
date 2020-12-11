@@ -32,11 +32,12 @@ module.exports = function(app) {
 
   // POST route for saving a new Recipe
   app.post("/api/recipes", function(req, res) {
+    console.log (req.user)
     // create takes an argument of an object describing the item we want to
     // insert into our table. In this case we just we pass in an object with a recipe
     // and body property (req.body)
     db.Recipe.create({
-      author: req.body.author,
+      author: req.user.username,
       recipe: req.body.recipe,
       ingredients: req.body.ingredients,
       body: req.body.body,

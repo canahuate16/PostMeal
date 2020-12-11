@@ -16,6 +16,7 @@ module.exports = function(app) {
   app.post("/api/signup", function(req, res) {
     db.User.create({
       email: req.body.email,
+      username: req.body.username,
       password: req.body.password
     })
       .then(function() {
@@ -47,12 +48,13 @@ module.exports = function(app) {
     }
   });
   app.post("/api/recipe", function (req,res) {
+    console.log (req.user + "HEREEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE")
     if (!req.user) {
       // The user is not logged in, send back an empty object
       res.json({ message: "Not authenticated"});
     }
     const recipe = { 
-      author: req.body.author,
+      author: req.user.username,
       recipe: req.body.recipe,
       ingredients: req.body.ingredients,
       body: req.body.body,
