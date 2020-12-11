@@ -30,11 +30,11 @@
 </div> --}}
 
 <div class ="container">
-    <h2>Meals Posted</h2>
+    <h2>{{author}}'s Recipes</h2>
     <div class="card" style="width: 18rem;">
   <ul>
    {{#each recipe}}
-   <li>{{recipe.author}}</li>
+   <li>{{recipe.data}}</li>
    {{/each}}
   </ul>
 </div>

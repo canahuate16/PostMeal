@@ -1,27 +1,26 @@
 // When the page loads, grab and display all of our chirps
-$.get("/api/recipes", function (data) {
+// $.get("/api/recipes", function (data) {
+//     console.log(data)
+//     if (data.length !== 0) {
 
-    if (data.length !== 0) {
+//         for (var i = 0; i < data.length; i++) {
 
-        for (var i = 0; i < data.length; i++) {
+//             var row = $("<div>");
+//             row.addClass("chirp");
 
-            var row = $("<div>");
-            row.addClass("chirp");
+//             row.append("<p>" + data[i].author + " shared.. </p>");
+//             row.append("<p>" + data[i].recipe + "</p>");
+//             row.append("<p>" + data[i].body + "</p>");
+//            row.append("<p>On " + new Date(data[i].created_at).toLocaleDateString() + "</p>");
 
-            row.append("<p>" + data[i].author + " shared.. </p>");
-            row.append("<p>" + data[i].recipe + "</p>");
-            row.append("<p>" + data[i].body + "</p>");
-            row.append("<p>On " + new Date(data[i].created_at).toLocaleDateString() + "</p>");
+//     
+//         }
 
-            $("#chirp-area").prepend(row);
+//     }
 
-        }
-
-    }
-
-});
+// });
 $.get("/api/all/recipes", function (data) {
-
+    console.log(data)
     if (data.length !== 0) {
 
         for (var i = 0; i < data.length; i++) {

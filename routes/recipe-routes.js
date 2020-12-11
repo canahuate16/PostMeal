@@ -13,13 +13,14 @@ var db = require("../models");
 module.exports = function(app) {
 
   // GET route for getting all of the Recipes
-  app.get("/api/recipes", function(req, res) {
+  app.get("/my-recipes", function(req, res) {
     // findAll returns all entries for a table when used with no options
     db.Recipe.findAll({
       where: {
         UserId: req.user.id
       }
     }).then(function(dbRecipe) {
+      console.log(dbRecipe);
       // We have access to the Recipes as an argument inside of the callback function
       res.render("index", dbRecipe);
     });
