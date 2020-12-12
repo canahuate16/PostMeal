@@ -32,7 +32,8 @@ $.get("/api/all/recipes", function (data) {
             row.append("<p>" + data[i].body + "</p>");
             row.append(`<img src=` + data[i].image_url+ ` >`);
             row.append("<p>On " + new Date(data[i].created_at).toLocaleDateString() + "</p>");
-
+            row.append("<hr>");
+            row.append("<br>");
             $("#chirp-area").prepend(row);
 
         }
@@ -71,7 +72,8 @@ $("#chirp-submit").on("click", function (event) {
             row.append("<p>" + `Instructions: ` + newChirp.body + "  </p>");
             row.append(`<img src=` + newChirp.image_url+ ` >`);
             row.append("<p>On " + new Date(newChirp.created_at).toLocaleDateString() + "</p>");
-
+            row.append("<hr>");
+            row.append("<br>");
 
             $("#chirp-area").prepend(row);
 
