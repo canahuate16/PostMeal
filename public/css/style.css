@@ -192,7 +192,8 @@ a{
 }
 
 
-#chirp-area img {
+#chirp-area img, #my-recipes-img{
   height: 230px;
   width: 300px;
 }
+

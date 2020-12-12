@@ -14,6 +14,7 @@ module.exports = function(app) {
         UserId: req.user.id
       }
     }).then(function(dbRecipe) {
+      console.log ('ABOVE OR BELOW PROB')
       console.log(dbRecipe);
       // We have access to the Recipes as an argument inside of the callback function
       res.render("index", {recipes:dbRecipe, author:req.user.username});
