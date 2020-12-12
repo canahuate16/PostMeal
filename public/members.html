@@ -30,87 +30,88 @@
   <div class="container">
     <!--Navbar Coding-->
     <div class="navbar-header">
-        <nav id="nav2" class="navbar navbar-expand-lg navbar-light">
-          <div id="navBar" class="container-fluid justify-content-center">
-            <a class="navbar-brand" style="font-family: 'Damion', cursive;">PostMeal</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link" style="font-family: 'Oswald', sans-serif;" href=/logout> Home </a> </li> <li
-                    class="nav-item">
-                    <a class="nav-link" style="font-family: 'Oswald', sans-serif;" href="#">My Recipes</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" style="font-family: 'Oswald', sans-serif;" href="#"> Log Out</a>
-                </li>
-              </ul>
-            </div>
+      <nav id="nav2" class="navbar navbar-expand-lg navbar-light">
+        <div id="navBar" class="container-fluid justify-content-center">
+          <a class="navbar-brand" style="font-family: 'Damion', cursive;">PostMeal</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" style="font-family: 'Oswald', sans-serif;" href=/members> Home </a> </li>
+              <li class="nav-item">
+                <a class="nav-link" style="font-family: 'Oswald', sans-serif;" href="/my-recipes">My Recipes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="font-family: 'Oswald', sans-serif;" href="/logout"> Log Out</a>
+              </li>
+            </ul>
           </div>
-        </nav>
-
-     <div id= "membersContainer" class="container">
-      <div class="row">
-        <h1>New Recipe</h1>
-        <div id="newRecipeForm" class="col-sm">
-          <p class="pRecipe">Recipe</p>
-          <input class="form-control" type="text" id="recipe" placeholder="Enter Recipe">
-          <br>
-          <p class="pRecipe">Ingredients</p>
-          <input class="form-control" type="text" id="ingredients" placeholder="Enter ingredients">
-          <br>
-          <p class="pRecipe">Instructions</p>
-          <textarea class="form-control" rows="3" id="chirp-box" placeholder="Enter instructions Here"></textarea> <br>
-         
-          <!----------------------------------------Uppy--------------------------------->
-          <div id="drag-drop-area"></div>
-
-          <script src="https://releases.transloadit.com/uppy/v1.23.2/uppy.min.js"></script>
-
-          <script>
-            var uppy = Uppy.Core()
-              .use(Uppy.Dashboard, {
-                inline: true,
-                target: '#drag-drop-area'
-              })
-              .use(Uppy.Tus, {
-                endpoint: 'https://master.tus.io/files/'
-              })
-
-            uppy.on('complete', (result) => {
-              console.log(result)
-              localStorage.setItem("img", result.successful[0].response.uploadURL)
-            })
-          </script>
-          <!-----------------------------------------Uppy ends---------------------------------->
-
-
-          <button id="chirp-submit" class="btn btn-lg">Submit!</button>
         </div>
-      </div>
-      <br><br><br>
+      </nav>
 
-      <div class="row">
-        <div class="col-sm-8 col-sm-offset-2">
-          <h2>Recipes Shared</h2>
-          <hr>
-          <div id="chirp-area"></div>
+      <div id="membersContainer" class="container">
+        <div class="row">
+          <h1>New Recipe</h1>
+          <div id="newRecipeForm" class="col-sm">
+            <p class="pRecipe">Recipe</p>
+            <input class="form-control" type="text" id="recipe" placeholder="Enter Recipe">
+            <br>
+            <p class="pRecipe">Ingredients</p>
+            <input class="form-control" type="text" id="ingredients" placeholder="Enter ingredients">
+            <br>
+            <p class="pRecipe">Instructions</p>
+            <textarea class="form-control" rows="3" id="chirp-box" placeholder="Enter instructions Here"></textarea>
+            <br>
+
+            <!----------------------------------------Uppy--------------------------------->
+            <div id="drag-drop-area"></div>
+
+            <script src="https://releases.transloadit.com/uppy/v1.23.2/uppy.min.js"></script>
+
+            <script>
+              var uppy = Uppy.Core()
+                .use(Uppy.Dashboard, {
+                  inline: true,
+                  target: '#drag-drop-area'
+                })
+                .use(Uppy.Tus, {
+                  endpoint: 'https://master.tus.io/files/'
+                })
+
+              uppy.on('complete', (result) => {
+                console.log(result)
+                localStorage.setItem("img", result.successful[0].response.uploadURL)
+              })
+            </script>
+            <!-----------------------------------------Uppy ends---------------------------------->
+
+
+            <button id="chirp-submit" class="btn btn-lg">Submit!</button>
+          </div>
         </div>
-      </div>
+        <br><br><br>
 
-    </div>
-    <script type="text/javascript" src="/js/recipe.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/members.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
+        <div class="row">
+          <div class="col-sm-8 col-sm-offset-2">
+            <h2>Recipes Shared</h2>
+            <hr>
+            <div id="chirp-area"></div>
+          </div>
+        </div>
+
+      </div>
+      <script type="text/javascript" src="/js/recipe.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script type="text/javascript" src="js/members.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+        </script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
 
 
 </body>
