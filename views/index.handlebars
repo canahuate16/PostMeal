@@ -30,19 +30,25 @@
     </div>
 
 
-<div id="myRecipeContainer" >
+<div id="myRecipeContainer" style="text-align:center" >
     <h2 style = "text-align: center;">{{author}}'s Recipes</h2>
-    <ul>
-        {{#each recipes}}
-        {{#dataValues}}
-        <li>
-            <p class="recipe">{{recipe}}</p>
-            <p class="ingredient">{{ingredients}}</p>
-            <img id= "my-recipes-img" src= {{image_url}} />
-        </li>
-        <hr>
-        <br>
+        {{!-- <div class="container justify-content-center col-md-6 col-md-offset-3"> 
+            <div class="row justify-content-center"> 
+                <div class="col-md-6 col-md-offset-3"> --}}
+                    <ul>
+                       {{#each recipes}}
+                        {{#dataValues}}
+                          <li>
+                             <p class="recipe">{{recipe}}</p>
+                             <p class="ingredient">{{ingredients}}</p>
+                             <img id= "my-recipes-img" src= {{image_url}} />
+                         </li>
+                          <hr>
+                          <br>
         {{/dataValues}}
         {{/each}}
-    </ul>
+                  </ul>
 </div>
+{{!-- </div>
+    </div>
+    </div>   --}}
