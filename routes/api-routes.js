@@ -48,7 +48,6 @@ module.exports = function(app) {
     }
   });
   app.post("/api/recipe", function (req,res) {
-    console.log (req.user + "HEREEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE")
     if (!req.user) {
       // The user is not logged in, send back an empty object
       res.json({ message: "Not authenticated"});
@@ -67,39 +66,3 @@ module.exports = function(app) {
   
 };
 
-
-// *********************************************************************************
-// api-routes.js - this file offers a set of routes for displaying and saving data to the db
-// *********************************************************************************
-
-// Dependencies
-// =============================================================
-// var connection = require("../config/config");
-
-// // Routes
-// // =============================================================
-// module.exports = function(app) {
-//   // Get all meals
-//   app.get("/api/all", function(req, res) {
-//     var dbQuery = "SELECT * FROM meals";
-
-//     connection.query(dbQuery, function(err, result) {
-//       if (err) throw err;
-//       res.json(result);
-//     });
-//   });
-
-//   // Add a chirp
-//   app.post("/api/new", function(req, res) {
-//     console.log("Meal Data:");
-//     console.log(req.body);
-
-//     var dbQuery = "INSERT INTO meals (author, recipe, body, created_at) VALUES (?,?,?,?)";
-
-//     connection.query(dbQuery, [req.body.author, req.body.recipe, req.body.body, req.body.created_at], function(err, result) {
-//       if (err) throw err;
-//       console.log("Meal Successfully Saved!");
-//       res.end();
-//     });
-//   });
-// };
