@@ -41,6 +41,7 @@ module.exports = function(app) {
       author: req.user.username,
       recipe: req.body.recipe,
       ingredients: req.body.ingredients,
+      image_url: req.body.image_url,
       body: req.body.body,
       UserId: req.user.id
     }).then(function(dbRecipe) {

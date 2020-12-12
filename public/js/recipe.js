@@ -30,6 +30,7 @@ $.get("/api/all/recipes", function (data) {
             row.append("<p>" + data[i].recipe + "</p>");
             row.append("<p>" + data[i].ingredients + "</p>");
             row.append("<p>" + data[i].body + "</p>");
+            row.append(`<img src=` + data[i].image_url+ ` >`);
             row.append("<p>On " + new Date(data[i].created_at).toLocaleDateString() + "</p>");
 
             $("#chirp-area").prepend(row);
@@ -46,9 +47,10 @@ $("#chirp-submit").on("click", function (event) {
     
     // Make a newChirp object
     var newChirp = {
-    
+        
         recipe: $("#recipe").val().trim(),
         ingredients: $("#ingredients").val().trim(),
+        image_url: localStorage.getItem("img"),
         body: $("#chirp-box").val().trim(),
         created_at: new Date().toISOString().slice(0, 19).replace('T', ' ')
     };
@@ -67,7 +69,9 @@ $("#chirp-submit").on("click", function (event) {
             row.append("<p>" + `Recipe: `+ newChirp.recipe + " </p>");
             row.append("<p>" + `Ingredients: `+ newChirp.ingredients + " </p>");
             row.append("<p>" + `Instructions: ` + newChirp.body + "  </p>");
+            row.append(`<img src=` + newChirp.image_url+ ` >`);
             row.append("<p>On " + new Date(newChirp.created_at).toLocaleDateString() + "</p>");
+
 
             $("#chirp-area").prepend(row);
 
