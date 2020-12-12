@@ -192,3 +192,7 @@ a{
 }
 
 
+#chirp-area img {
+  height: 230px;
+  width: 300px;
+}
