@@ -5,16 +5,29 @@
   <title>PostMeal Member's page</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://releases.transloadit.com/uppy/v1.23.2/uppy.min.css" rel="stylesheet">
+  <!-- jQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="/css/member.css">
   <link href="https://fonts.googleapis.com/css2?family=Damion&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
   <link href="css/style.css" rel="stylesheet">
 
 </head>
 
 <body>
- <div class="container">
+
+  <div class="container">
     <!--Navbar Coding-->
     <div class="navbar-header">
         <nav id="nav2" class="navbar navbar-expand-lg navbar-light">
@@ -39,8 +52,7 @@
           </div>
         </nav>
 
-<!--Form for creating Recipes-->
-    <div id= "membersContainer" class="container">
+     <div id= "membersContainer" class="container">
       <div class="row">
         <h1>New Recipe</h1>
         <div id="newRecipeForm" class="col-sm">
@@ -52,52 +64,53 @@
           <br>
           <p class="pRecipe">Instructions</p>
           <textarea class="form-control" rows="3" id="chirp-box" placeholder="Enter instructions Here"></textarea> <br>
-        
-        
-          <!----------------------------------------Uppy------------------------------>
+         
+          <!----------------------------------------Uppy--------------------------------->
           <div id="drag-drop-area"></div>
 
           <script src="https://releases.transloadit.com/uppy/v1.23.2/uppy.min.js"></script>
-          
+
           <script>
             var uppy = Uppy.Core()
               .use(Uppy.Dashboard, {
                 inline: true,
                 target: '#drag-drop-area'
               })
-              .use(Uppy.Tus, {endpoint: 'https://master.tus.io/files/'})
-       
+              .use(Uppy.Tus, {
+                endpoint: 'https://master.tus.io/files/'
+              })
+
             uppy.on('complete', (result) => {
               console.log(result)
               localStorage.setItem("img", result.successful[0].response.uploadURL)
             })
           </script>
-       <!-----------------------------------------Uppy ends---------------------------------->
-        
-          <button id="chirp-submit" class="btn btn-lg">Post My Meal</button>
+          <!-----------------------------------------Uppy ends---------------------------------->
 
+
+          <button id="chirp-submit" class="btn btn-lg">Submit!</button>
         </div>
       </div>
       <br><br><br>
 
       <div class="row">
-        <div class="col-sm">
-          <h1>Recipes Shared</h1>
+        <div class="col-sm-8 col-sm-offset-2">
+          <h2>Recipes Shared</h2>
           <hr>
           <div id="chirp-area"></div>
         </div>
       </div>
 
     </div>
-
-
-
-
     <script type="text/javascript" src="/js/recipe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/members.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
 
 
 </body>
