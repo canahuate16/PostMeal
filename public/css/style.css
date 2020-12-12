@@ -155,7 +155,7 @@ a{
   color: olive;
 }
 
-#newRecipeForm{
+#newRecipeForm, #myRecipeContainer{
   background-color: white;
   background-size: 100%;
   margin-top: 15px;

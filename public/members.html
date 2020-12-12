@@ -30,6 +30,7 @@
   <div class="container">
     <!--Navbar Coding-->
     <div class="navbar-header">
+
         <nav id="nav2" class="navbar navbar-expand-lg navbar-light navbar sticky-top">
           <div id="navBar" class="container-fluid justify-content-center">
             <a id= "navBrand" class="navbar-brand" style="font-family: 'Damion', cursive;" href="/my-recipes">PostMeal</a>
@@ -50,48 +51,51 @@
               </ul>
             </div>
           </div>
-        </nav>
-
-     <div id= "membersContainer" class="container">
-      <div class="row">
-        <h1>New Recipe</h1>
-        <div id="newRecipeForm" class="col-sm">
-          <p class="pRecipe">Recipe</p>
-          <input class="form-control" type="text" id="recipe" placeholder="Enter Recipe">
-          <br>
-          <p class="pRecipe">Ingredients</p>
-          <input class="form-control" type="text" id="ingredients" placeholder="Enter ingredients">
-          <br>
-          <p class="pRecipe">Instructions</p>
-          <textarea class="form-control" rows="3" id="chirp-box" placeholder="Enter instructions Here"></textarea> <br>
-         
-          <!----------------------------------------Uppy--------------------------------->
-          <div id="drag-drop-area"></div>
-
-          <script src="https://releases.transloadit.com/uppy/v1.23.2/uppy.min.js"></script>
-
-          <script>
-            var uppy = Uppy.Core()
-              .use(Uppy.Dashboard, {
-                inline: true,
-                target: '#drag-drop-area'
-              })
-              .use(Uppy.Tus, {
-                endpoint: 'https://master.tus.io/files/'
-              })
-
-            uppy.on('complete', (result) => {
-              console.log(result)
-              localStorage.setItem("img", result.successful[0].response.uploadURL)
-            })
-          </script>
-          <!-----------------------------------------Uppy ends---------------------------------->
-
-
-          <button id="chirp-submit" class="btn btn-lg">Submit!</button>
         </div>
-      </div>
-      <br><br><br>
+      </nav>
+
+      <div id="membersContainer" class="container">
+        <div class="row">
+          <h1>New Recipe</h1>
+          <div id="newRecipeForm" class="col-sm">
+            <p class="pRecipe">Recipe</p>
+            <input class="form-control" type="text" id="recipe" placeholder="Enter Recipe">
+            <br>
+            <p class="pRecipe">Ingredients</p>
+            <input class="form-control" type="text" id="ingredients" placeholder="Enter ingredients">
+            <br>
+            <p class="pRecipe">Instructions</p>
+            <textarea class="form-control" rows="3" id="chirp-box" placeholder="Enter instructions Here"></textarea>
+            <br>
+
+            <!----------------------------------------Uppy--------------------------------->
+            <div id="drag-drop-area"></div>
+
+            <script src="https://releases.transloadit.com/uppy/v1.23.2/uppy.min.js"></script>
+
+            <script>
+              var uppy = Uppy.Core()
+                .use(Uppy.Dashboard, {
+                  inline: true,
+                  target: '#drag-drop-area'
+                })
+                .use(Uppy.Tus, {
+                  endpoint: 'https://master.tus.io/files/'
+                })
+
+              uppy.on('complete', (result) => {
+                console.log(result)
+                localStorage.setItem("img", result.successful[0].response.uploadURL)
+              })
+            </script>
+            <!-----------------------------------------Uppy ends---------------------------------->
+
+
+            <button id="chirp-submit" class="btn btn-lg">Submit!</button>
+          </div>
+        </div>
+        <br><br><br>
+
 
       <div class="row">
         <div class="col-sm">
@@ -99,18 +103,17 @@
           <hr>
           <div id="chirp-area"></div>
         </div>
-      </div>
 
-    </div>
-    <script type="text/javascript" src="/js/recipe.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/members.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
+      </div>
+      <script type="text/javascript" src="/js/recipe.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script type="text/javascript" src="js/members.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+        </script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
 
 
 </body>
