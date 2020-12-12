@@ -40,7 +40,7 @@ $(document).ready(function() {
   }
 
   function handleLoginErr(err) {
-    $("#alert .msg").text(err.responseJSON);
+    $("#alert .msg").text("Something went wrong!");
     $("#alert").fadeIn(500);
   }
 });

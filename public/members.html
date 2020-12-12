@@ -56,7 +56,7 @@
 
       <div id="membersContainer" class="container">
         <div class="row">
-          <h1>New Recipe</h1>
+          <h1 id= "member-Header">New Recipe</h1>
           <div id="newRecipeForm" class="col-sm">
             <p class="pRecipe">Recipe</p>
             <input class="form-control" type="text" id="recipe" placeholder="Enter Recipe">
@@ -69,7 +69,7 @@
             <br>
 
             <!----------------------------------------Uppy--------------------------------->
-            <div id="drag-drop-area"></div>
+            <div id="drag-drop-area">
 
             <script src="https://releases.transloadit.com/uppy/v1.23.2/uppy.min.js"></script>
 
@@ -88,6 +88,7 @@
                 localStorage.setItem("img", result.successful[0].response.uploadURL)
               })
             </script>
+            </div>
             <!-----------------------------------------Uppy ends---------------------------------->
 
 
