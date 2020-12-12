@@ -84,4 +84,5 @@ $("#chirp-submit").on("click", function (event) {
     $("#recipe").val("");
     $("#ingredients").val("");
     $("#chirp-box").val("");
+    
 });
