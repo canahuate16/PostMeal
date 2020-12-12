@@ -19,7 +19,7 @@ body {
   padding: 0px;
 }
 
-.navbar-light .navbar-brand {
+#navBrand{
   color: olive;
   font-size: 28px;
 }
@@ -175,10 +175,24 @@ a{
 
 .chirp{
   font-family: 'Oswald', sans-serif;
-  color: olive;
+  color: black;
+}
+
+#chirp-area{
+  background-color: white;
+  border-radius: 10px;
+  border: 4px solid olive;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+
 }
 
 
-
-
-
+#chirp-area img {
+  height: 230px;
+  width: 300px;
+}
